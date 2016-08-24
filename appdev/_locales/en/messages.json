@@ -215,6 +215,15 @@
   "c_o_styles": {
     "message": "Styles, colors"
   },
+  "c_o_themeSettings": {
+    "message": "Themes"
+  },
+  "c_o_invertTheme": {
+    "message": "Invert"
+  },
+  "c_o_invertHelp": {
+    "message": "Switch Theme [Light/Dark]"
+  },
   "c_l_left": {
     "message": "Left column"
   },

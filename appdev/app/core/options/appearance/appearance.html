@@ -1,0 +1,28 @@
+<div class="ui grid">
+  <div class="row">
+    <div class="sixteen wide column">
+      <button id="themeToggleBut" class="ui  button" ng-click="vm.toggleTheme()" ng-class="vm.styles.priButton" ps-i18n="c_o_invertTheme">
+        {{vm.locale("c_o_invertTheme")}}
+      </button>
+      {{vm.locale("c_o_invertHelp")}}
+
+      <div class="ui floating scrolling dropdown theme basic button" data-element="header" data-type="element">
+        <span class="text">Default Theme</span>
+        <div class="menu transition hidden">
+
+          <div class="item active selected" data-value="Default" data-text="Default Theme">Default</div>
+
+          <div class="item" data-value="Classic" data-text="Classic Theme">Classic</div>
+
+          <div class="item" data-value="Bookish" data-text="Bookish Theme">Bookish</div>
+
+          <div class="item" data-value="Chubby" data-text="Chubby Theme">Chubby</div>
+
+          <div class="item" data-value="Material" data-text="Material Theme">Material</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

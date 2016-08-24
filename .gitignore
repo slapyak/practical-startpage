@@ -17,6 +17,7 @@ pids
 # Minified components
 /build/
 /release/
+/_gsdata_/
 
 # Dependency directory
 node_modules
