@@ -8,6 +8,8 @@
     function AppearanceCtrl(dataService, i18n) {
         var vm = this;
         vm.columns = [];
+        vm.previewColors = [];  //css variable names
+        vm.liveColors = [];     //css variable names
         vm.toggleTheme = toggleTheme;
         vm.choosePreset = choosePreset;
         vm.undoChanges = undoChanges;

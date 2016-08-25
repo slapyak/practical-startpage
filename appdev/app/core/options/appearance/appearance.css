@@ -1,43 +1,45 @@
 /* Theming Controls */
 
 :root {
-    --pri_bg:#ffffff;
-    --pri_accent:#1560BD;
-    --pri_hover:#CCE2FF;
-    --pri_active:#4183C4;
-    --pri_text:#000000;
-    --sec_bg:#212121;
-    --sec_accent:#212121;
-    --sec_hover:#464646;
-    --sec_active:#333333;
-    --sec_text:#eeeeee;
-    --pri_warn:#700000;
-    --pri_err:#700000;
-    --pri_attn:#700000;
-    --sec_warn:#700000;
-    --sec_err:#700000;
-    --sec_attn:#700000;
-    --pri_inverted:#700000;
-    --sec_inverted:#700000;
-
-        --preview_pri_bg:#4184C6;
-    --preview_pri_accent:#f05010;
-    --preview_pri_hover:#CCE2FF;
-        --preview_pri_active:#4184c6;
-        --preview_pri_text:#000000;
-        --preview_sec_bg:#212121;
-        --preview_sec_accent:#212122;
-        --preview_sec_hover:#464646;
-        --preview_sec_active:#333333;
-    --preview_sec_text:#eeeeee;
-    --preview_light_warn:#700000;
-    --preview_light_err:#d00000;
-    --preview_light_attn:#006030;
-    --preview_dark_warn:#d05050;
-    --preview_dark_err:#f00000;
-    --preview_dark_attn:#50f090;
-    --preview_pri_inverted:#d09030;
-    --preview_sec_inverted:#c0c0c0;
+    --pri_bg: #ffffff;
+    --pri_accent: #1560BD;
+    --pri_hover: #CCE2FF;
+    --pri_active: #4183C4;
+    --pri_text: #000000;
+    --sec_bg: #212121;
+    --sec_accent: #212121;
+    --sec_hover: #464646;
+    --sec_active: #333333;
+    --sec_text: #eeeeee;
+    /* calculated, fixed colors, (but changes for light or dark theme...) */
+    --pri_warn: #700000;
+    --pri_err: #700000;
+    --pri_attn: #700000;
+    --sec_warn: #700000;
+    --sec_err: #700000;
+    --sec_attn: #700000;
+    --pri_inverted: #700000;
+    --sec_inverted: #700000;
+    /* preview stuff */
+    --preview_pri_bg: #4184C6;
+    --preview_pri_accent: #f05010;
+    --preview_pri_hover: #CCE2FF;
+    --preview_pri_active: #4184c6;
+    --preview_pri_text: #000000;
+    --preview_sec_bg: #212121;
+    --preview_sec_accent: #212122;
+    --preview_sec_hover: #464646;
+    --preview_sec_active: #333333;
+    --preview_sec_text: #eeeeee;
+    /* fixed presets */
+    --preview_light_warn: #700000;
+    --preview_light_err: #d00000;
+    --preview_light_attn: #006030;
+    --preview_dark_warn: #d05050;
+    --preview_dark_err: #f00000;
+    --preview_dark_attn: #50f090;
+    --preview_pri_inverted: #d09030;
+    --preview_sec_inverted: #c0c0c0;
 }
 
 input {
@@ -121,4 +123,37 @@ input {
 
 .ui.pri.segment:not(.inverted) {
     border-top: 2px solid var(--preview_pri_accent);
+    background: var(--preview_pri_bg);
+    color: var(--preview_pri_text);
+}
+
+.ui.inverted.pri.menu,
+.ui.inverted.menu .pri.active.item {
+    background-color: var(--preview_pri_accent);
+}
+
+.ui.inverted.pri.menu .active.item {
+    background: var(--preview_pri_active);
+}
+
+
+/* Light Hover */
+
+.ui.inverted.menu .dropdown.item:hover,
+.ui.inverted.menu .link.item:hover,
+.ui.inverted.menu a.item:hover,
+.ui.link.inverted.menu .item:hover {
+    background: rgba(255, 255, 255, .25);
+    color: #ffffff;
+}
+
+
+/* Dark Hover - over dark accent colors */
+
+.ui.menu .dropdown.item:hover,
+.ui.menu .link.item:hover,
+.ui.menu a.item:hover,
+.ui.link.menu .item:hover {
+    background: rgba(0, 0, 0, .10);
+    color: #000000;
 }
