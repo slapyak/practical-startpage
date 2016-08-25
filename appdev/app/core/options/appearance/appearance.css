@@ -1,48 +1,43 @@
 /* Theming Controls */
 
 :root {
-    --pri_bg: #ffffff;
-    --pri_accent: #1560BD;
-    --pri_hover: #CCE2FF;
-    --pri_active: #4183C4;
-    --pri_text: #000000;
-    --sec_bg: #212121;
-    --sec_accent: #212121;
-    --sec_hover: #464646;
-    --sec_active: #333333;
-    --sec_text: #eeeeee;
-    /* automatically set variables */
-    --pri_warn: ;
-    --pri_err: ;
-    --pri_attn: ;
-    --sec_warn: ;
-    --sec_err: ;
-    --sec_attn: ;
-    --pri_inverted: ;
-    --sec_inverted: ;
-}
+    --pri_bg:#ffffff;
+    --pri_accent:#1560BD;
+    --pri_hover:#CCE2FF;
+    --pri_active:#4183C4;
+    --pri_text:#000000;
+    --sec_bg:#212121;
+    --sec_accent:#212121;
+    --sec_hover:#464646;
+    --sec_active:#333333;
+    --sec_text:#eeeeee;
+    --pri_warn:#700000;
+    --pri_err:#700000;
+    --pri_attn:#700000;
+    --sec_warn:#700000;
+    --sec_err:#700000;
+    --sec_attn:#700000;
+    --pri_inverted:#700000;
+    --sec_inverted:#700000;
 
-:root {
-    --preview_pri_bg: #ffffff;
-    --preview_pri_accent: #f51;
-    --preview_pri_hover: #CCE2FF;
-    --preview_pri_active: #4183C4;
-    --preview_pri_text: #000000;
-    --preview_sec_bg: #212121;
-    --preview_sec_accent: #212121;
-    --preview_sec_hover: #464646;
-    --preview_sec_active: #333333;
-    --preview_sec_text: #eeeeee;
-    /* automatically set variables
-       determine if primary color is light or dark, then apply the appropriate color for each function */
-    --preview_light_warn: #700;
-    --preview_light_err: #d00;
-    --preview_light_attn: #063;
-    --preview_dark_warn: #d55;
-    --preview_dark_err: #f00;
-    --preview_dark_attn: #5f9;
-    --preview_pri_inverted: #d93;
-    --preview_sec_inverted: #ccc;
+        --preview_pri_bg:#4184C6;
+    --preview_pri_accent:#f05010;
+    --preview_pri_hover:#CCE2FF;
+        --preview_pri_active:#4184c6;
+        --preview_pri_text:#000000;
+        --preview_sec_bg:#212121;
+        --preview_sec_accent:#212122;
+        --preview_sec_hover:#464646;
+        --preview_sec_active:#333333;
+    --preview_sec_text:#eeeeee;
+    --preview_light_warn:#700000;
+    --preview_light_err:#d00000;
+    --preview_light_attn:#006030;
+    --preview_dark_warn:#d05050;
+    --preview_dark_err:#f00000;
+    --preview_dark_attn:#50f090;
+    --preview_pri_inverted:#d09030;
+    --preview_sec_inverted:#c0c0c0;
 }
 
 input {

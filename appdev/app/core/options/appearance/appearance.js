@@ -27,21 +27,29 @@
             secButton: dataService.data.styles.secondaryCol,
         };
 
-        function handleUpdate(e) {
-            document.documentElement.style.setProperty(`--${this.id}`, this.value);
-            console.log(`--${this.id}`, this.value);
-        }
-
         activate();
 
         function activate() {
-            getData();
+            getData(); //get the current colors used, preset the input colors to that value
             dataService.setOnChangeData('appearance', getData);
             // get the inputs
+            var bodyStyles = window.getComputedStyle(document.body);
             var inputs = [].slice.call(document.querySelectorAll('.themeControls input'));
+            inputs.forEach(function(input) {
+                var str = bodyStyles.getPropertyValue(`--${input.id}`);
+                //console.log(str);
+                str = str.replace(/\s+/g, '');
+                str = str.replace(/\\3/, '');
+                //console.log(str);
+                input.value = str;
+                // listen for changes
+                input.addEventListener('change', handleUpdate);
+            }, this);
+        }
 
-            // listen for changes
-            inputs.forEach(input => input.addEventListener('change', handleUpdate));
+        function handleUpdate(e) {
+            document.documentElement.style.setProperty(`--${this.id}`, this.value);
+            //console.log(`--${this.id}`, this.value);
         }
 
         function clear(appearance) {
