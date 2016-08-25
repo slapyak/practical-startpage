@@ -11,95 +11,98 @@
             </button>
 
             <div class="ui divider"></div>
+            <div class="themeControls">
+                <table class="ui very basic unstackable compact table">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+                            <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
+                            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+                            <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
+                        </tr>
+                    </thead>
 
-            <table class="ui very basic unstackable compact table">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
-                        <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
-                        <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
-                        <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
-                    </tr>
-                </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="right aligned">
+                                Primary Background
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_pri_bg" value="#ffffff">
+                            </td>
+                            <td colspan="2" class="right aligned">
+                                Secondary Background
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_sec_bg" value="#212121">
+                            </td>
+                        </tr>
 
-                <tbody>
-                    <tr>
-                        <td colspan="2" class="right aligned">
-                            Primary Background
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_pri_bg" value="#ffffff">
-                        </td>
-                        <td colspan="2" class="right aligned">
-                            Secondary Background
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_sec_bg" value="#212121">
-                        </td>
-                    </tr>
+                        <tr>
+                            <td colspan="2" class="right aligned">
+                                Primary Accent
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <div class="themeControls">
+                                    <input type="color" id="preview_pri_accent" value="#1560BD">
+                                </div>
+                            </td>
+                            <td colspan="2" class="right aligned">
+                                Secondary Accent
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_sec_accent" value="#212121">
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td colspan="2" class="right aligned">
-                            Primary Accent
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_pri_accent" value="#1560BD">
-                        </td>
-                        <td colspan="2" class="right aligned">
-                            Secondary Accent
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_sec_accent" value="#212121">
-                        </td>
-                    </tr>
+                        <tr>
+                            <td colspan="2" class="right aligned">
+                                Primary Highlight
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_pri_hover" value="#CCE2FF">
+                            </td>
+                            <td colspan="2" class="right aligned">
+                                Secondary Highlight
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_sec_hover" value="#464646">
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td colspan="2" class="right aligned">
-                            Primary Highlight
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_pri_hover" value="#CCE2FF">
-                        </td>
-                        <td colspan="2" class="right aligned">
-                            Secondary Highlight
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_sec_hover" value="#464646">
-                        </td>
-                    </tr>
+                        <tr>
+                            <td colspan="2" class="right aligned">
+                                Primary Active
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_pri_active" value="#4183C4">
+                            </td>
+                            <td colspan="2" class="right aligned">
+                                Secondary Active
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_sec_active" value="#333333">
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td colspan="2" class="right aligned">
-                            Primary Active
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_pri_active" value="#4183C4">
-                        </td>
-                        <td colspan="2" class="right aligned">
-                            Secondary Active
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_sec_active" value="#333333">
-                        </td>
-                    </tr>
+                        <tr>
+                            <td colspan="2" class="right aligned">
+                                Primary Text
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_pri_text" value="#000000">
+                            </td>
+                            <td colspan="2" class="right aligned">
+                                Secondary Text
+                            </td>
+                            <td colspan="1" class="center aligned">
+                                <input type="color" id="preview_sec_text" value="#eeeeee">
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td colspan="2" class="right aligned">
-                            Primary Text
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_pri_text" value="#000000">
-                        </td>
-                        <td colspan="2" class="right aligned">
-                            Secondary Text
-                        </td>
-                        <td colspan="1" class="center aligned">
-                            <input type="color" id="preview_sec_text" value="#eeeeee">
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="one wide column"></div>
@@ -121,7 +124,7 @@
                     </a>
                 </div>
             </div>
-            <div class="ui tab segment blue active" ng-class="tab.classes">
+            <div class="ui tab segment pri active" ng-class="tab.classes">
 
                 <!---->
                 <div class="browser right" ng-class="[vm.col.label]">

@@ -24,7 +24,7 @@
 
 :root {
     --preview_pri_bg: #ffffff;
-    --preview_pri_accent: #1560BD;
+    --preview_pri_accent: #f51;
     --preview_pri_hover: #CCE2FF;
     --preview_pri_active: #4183C4;
     --preview_pri_text: #000000;
@@ -125,5 +125,5 @@ input {
 /* preview_pri_accent REPLACEMENTS */
 
 .ui.pri.segment:not(.inverted) {
-    border-top: 2px solid #ff0000
+    border-top: 2px solid var(--preview_pri_accent);
 }
