@@ -1,3 +1,19 @@
+/* Theming Controls */
+
+:root {
+  --pri_bg: #ffc600;
+  --pri_accent: #ffc600;
+  --pri_hover: #ffc600;
+  --pri_active: #ffc600;
+  --pri_text: #ffc600;
+  --sec_bg: #ffc600;
+  --sec_accent: #ffc600;
+  --sec_hover: #ffc600;
+  --sec_active: #ffc600;
+  --sec_text: #ffc600;
+}
+
+
 /*Core*/
 
 html,
