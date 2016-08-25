@@ -1,16 +1,16 @@
 /* Theming Controls */
 
 :root {
-  --pri_bg: #ffc600;
-  --pri_accent: #ffc600;
-  --pri_hover: #ffc600;
-  --pri_active: #ffc600;
-  --pri_text: #ffc600;
-  --sec_bg: #ffc600;
-  --sec_accent: #ffc600;
-  --sec_hover: #ffc600;
-  --sec_active: #ffc600;
-  --sec_text: #ffc600;
+  --pri_bg: #ffffff;
+  --pri_accent: #1560BD;
+  --pri_hover: #CCE2FF;
+  --pri_active: #4183C4;
+  --pri_text: #000000;
+  --sec_bg: #212121;
+  --sec_accent: #212121;
+  --sec_hover: #464646;
+  --sec_active: #333333;
+  --sec_text: #eeeeee;
 }
 
 
