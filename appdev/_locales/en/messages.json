@@ -219,10 +219,16 @@
     "message": "Themes"
   },
   "c_o_invertTheme": {
-    "message": "Invert"
+    "message": "Invert Current Theme"
   },
   "c_o_invertHelp": {
     "message": "Switch Theme [Light/Dark]"
+  },
+  "c_o_themeObject": {
+    "message": "Color Type"
+  },
+  "c_o_themeColor": {
+    "message": "Select Color"
   },
   "c_l_left": {
     "message": "Left column"

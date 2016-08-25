@@ -1,12 +1,69 @@
 <div class="ui grid">
   <div class="row">
-    <div class="sixteen wide column">
-      <button id="themeToggleBut" class="ui  button" ng-click="vm.toggleTheme()" ng-class="vm.styles.priButton" ps-i18n="c_o_invertTheme">
+    <div class="ten wide column">
+
+      <button id="themeToggleBut" ng-click="vm.toggleTheme()" class="ui left floated button" ng-class="vm.styles.priButton" ps-i18n="c_o_invertTheme">
         {{vm.locale("c_o_invertTheme")}}
       </button>
-      {{vm.locale("c_o_invertHelp")}}
+      <select id="themePicker" class="ui dropdown">
+        <option value="">Select Theme</option>
+        <option value="1">Light</option>
+        <option value="0">Dark</option>
+      </select>
+      <button class="ui right floated button" ng-class="vm.styles.secButton" ng-click="vm.getData()">
+        {{vm.locale("UndoAll")}}
+      </button>
+
+      <div class="ui divider"></div>
+
+      <table class="ui very basic unstackable compact table">
+        <thead>
+          <tr>
+            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+            <th colspan="1" class="left aligned" ps-i18n="c_o_themeColor"></th>
+            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+            <th colspan="1" class="left aligned" ps-i18n="c_o_themeColor"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td colspan="2" class="right aligned">
+              Primary
+            </td>
+            <td colspan="1" class="left aligned">
+              <input type="color" id="primary" value="#ffc600">
+            </td>
+            <td colspan="2" class="right aligned">
+              Primary Highlight
+            </td>
+            <td colspan="1" class="left aligned">
+              <input type="color" id="primary_highlight" value="#ffc600">
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="right aligned">
+              Secondary
+            </td>
+            <td colspan="1" class="left aligned">
+              <input type="color" id="secondary" value="#ffc600">
+            </td>
+            <td colspan="2" class="right aligned">
+              Secondary Highlight
+            </td>
+            <td colspan="1" class="left aligned">
+              <input type="color" id="secondary_highlight" value="#ffc600">
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
 
 
+    <div class="six wide column">
+      sample layout
     </div>
   </div>
 </div>
