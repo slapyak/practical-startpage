@@ -1,0 +1,22 @@
+:root {
+    --preview_pri_bg: #ffffff;
+    --preview_pri_accent: #1560BD;
+    --preview_pri_hover: #CCE2FF;
+    --preview_pri_active: #4183C4;
+    --preview_pri_text: #000000;
+    --preview_sec_bg: #212121;
+    --preview_sec_accent: #212121;
+    --preview_sec_hover: #464646;
+    --preview_sec_active: #333333;
+    --preview_sec_text: #eeeeee;
+    /* automatically set variables
+       determine if primary color is light or dark, then apply the appropriate color for each function */
+    --preview_light_warn: #700;
+    --preview_light_err: #d00;
+    --preview_light_attn: #063;
+    --preview_dark_warn: #d55;
+    --preview_dark_err: #f00;
+    --preview_dark_attn: #5f9;
+    --preview_pri_inverted: #d93;
+    --preview_sec_inverted: #ccc;
+}

@@ -1,165 +1,193 @@
 <div class="ui grid">
-  <div class="row">
-    <div class="ten wide column">
+    <div class="row">
+        <div class="ten wide column">
+            <select id="themePicker" class="ui dropdown">
+                <option value="">Theme Presets</option>
+                <option value="1">Light</option>
+                <option value="0">Dark</option>
+            </select>
+            <button class="ui right floated button" ng-class="vm.styles.secButton" ng-click="vm.getData()">
+                {{vm.locale("UndoAll")}}
+            </button>
 
-      <button id="themeToggleBut" ng-click="vm.toggleTheme()" class="ui left floated button" ng-class="vm.styles.priButton" ps-i18n="c_o_invertTheme">
-        {{vm.locale("c_o_invertTheme")}}
-      </button>
-      <select id="themePicker" class="ui dropdown">
-        <option value="">Select Theme</option>
-        <option value="1">Light</option>
-        <option value="0">Dark</option>
-      </select>
-      <button class="ui right floated button" ng-class="vm.styles.secButton" ng-click="vm.getData()">
-        {{vm.locale("UndoAll")}}
-      </button>
+            <div class="ui divider"></div>
 
-      <div class="ui divider"></div>
+            <table class="ui very basic unstackable compact table">
+                <thead>
+                    <tr>
+                        <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+                        <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
+                        <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+                        <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
+                    </tr>
+                </thead>
 
-      <table class="ui very basic unstackable compact table">
-        <thead>
-          <tr>
-            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
-            <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
-            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
-            <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
-          </tr>
-        </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="right aligned">
+                            Primary Background
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="primary" value="#ffffff">
+                        </td>
+                        <td colspan="2" class="right aligned">
+                            Secondary Background
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="primary_highlight" value="#212121">
+                        </td>
+                    </tr>
 
-        <tbody>
-          <tr>
-            <td colspan="2" class="right aligned">
-              Primary Background
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="primary" value="#ffffff">
-            </td>
-            <td colspan="2" class="right aligned">
-              Secondary Background
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="primary_highlight" value="#212121">
-            </td>
-          </tr>
+                    <tr>
+                        <td colspan="2" class="right aligned">
+                            Primary Accent
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary" value="#1560BD">
+                        </td>
+                        <td colspan="2" class="right aligned">
+                            Secondary Accent
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary_highlight" value="#212121">
+                        </td>
+                    </tr>
 
-          <tr>
-            <td colspan="2" class="right aligned">
-              Primary Accent
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary" value="#1560BD">
-            </td>
-            <td colspan="2" class="right aligned">
-              Secondary Accent
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary_highlight" value="#212121">
-            </td>
-          </tr>
+                    <tr>
+                        <td colspan="2" class="right aligned">
+                            Primary Highlight
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary" value="#CCE2FF">
+                        </td>
+                        <td colspan="2" class="right aligned">
+                            Secondary Highlight
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary_highlight" value="#464646">
+                        </td>
+                    </tr>
 
-          <tr>
-            <td colspan="2" class="right aligned">
-              Primary Highlight
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary" value="#CCE2FF">
-            </td>
-            <td colspan="2" class="right aligned">
-              Secondary Highlight
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary_highlight" value="#464646">
-            </td>
-          </tr>
+                    <tr>
+                        <td colspan="2" class="right aligned">
+                            Primary Active
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary" value="#4183C4">
+                        </td>
+                        <td colspan="2" class="right aligned">
+                            Secondary Active
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary_highlight" value="#333333">
+                        </td>
+                    </tr>
 
-          <tr>
-            <td colspan="2" class="right aligned">
-              Primary Active
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary" value="#4183C4">
-            </td>
-            <td colspan="2" class="right aligned">
-              Secondary Active
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary_highlight" value="#333333">
-            </td>
-          </tr>
+                    <tr>
+                        <td colspan="2" class="right aligned">
+                            Primary Text
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary" value="#000000">
+                        </td>
+                        <td colspan="2" class="right aligned">
+                            Secondary Text
+                        </td>
+                        <td colspan="1" class="center aligned">
+                            <input type="color" id="secondary_highlight" value="#eeeeee">
+                        </td>
+                    </tr>
 
-          <tr>
-            <td colspan="2" class="right aligned">
-              Primary Text
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary" value="#000000">
-            </td>
-            <td colspan="2" class="right aligned">
-              Secondary Text
-            </td>
-            <td colspan="1" class="center aligned">
-              <input type="color" id="secondary_highlight" value="#eeeeee">
-            </td>
-          </tr>
+                </tbody>
+            </table>
+        </div>
 
-        </tbody>
-      </table>
+        <div class="one wide column"></div>
+
+        <div class="five wide column">
+
+            <div class="ui menu blue inverted" ng-class="Layout.priMenuClasses" ng-init="colIndex=$index">
+                <!---->
+                <a class="item blue active" ng-class="tab.classes">
+                    <span>Preview</span>
+                </a>
+                <a class="item blue" ng-class="tab.classes">
+                    <span>Tab</span>
+                </a>
+                <!---->
+                <div class="right menu">
+                    <a class="item" ui-popup="col.helpPopup">
+                        <i class="help circle icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ui tab segment blue active" ng-class="tab.classes">
+
+                <!---->
+                <div class="browser right" ng-class="[vm.col.label]">
+                    <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
+                        <img ng-src="chrome://favicon/http://pd75.github.io/" src="chrome://favicon/http://pd75.github.io/"> Practical Startpage Dev
+                    </a>
+                </div>
+                <!---->
+                <div class="browser right" ng-class="[vm.col.label]">
+                    <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
+                        <img ng-src="http://www.slapyak.com/images/logo_yak.png" src="http://www.slapyak.com/images/logo_yak.png"> slapyak @ github
+                    </a>
+                </div>
+                <!---->
+                <div class="browser right" ng-class="[vm.col.label]">
+                    <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
+                        <img ng-src="chrome://favicon/https://github.com/" src="chrome://favicon/https://github.com/"> GitHub
+                    </a>
+                </div>
+                <!---->
+                <div class="browser right" ng-class="[vm.col.label]">
+                    <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
+                        <img ng-src="http://semantic-ui.com/images/logo.png" src="http://semantic-ui.com/images/logo.png"> Semantic UI
+                    </a>
+                </div>
+                <!---->
+                <div class="browser right" ng-class="[vm.col.label]">
+                    <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
+                        <img ng-src="http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d" src="http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d"> How to code? - Stack Overflow
+                    </a>
+                </div>
+                <!---->
+            </div>
+            <!-- end of the list -->
+
+            <div class="ui menu black inverted">
+                <div class="header item">
+                    Theme
+                </div>
+
+                <div class="ui icon bottom right pointing dropdown item" ui-dropdown="" tabindex="0">
+                    <i class="setting icon"></i>
+                    <div class="menu transition hidden" tabindex="-1">
+                        <!---->
+                        <div class="item active selected">
+                            <i class="icon options" ng-class="menuItem.icon"></i> Example
+                        </div>
+                        <!---->
+                        <div class="item">
+                            <i class="icon help" ng-class="menuItem.icon"></i> Menu
+                        </div>
+                        <!---->
+                        <div class="item">
+                            <i class="icon info" ng-class="menuItem.icon"></i> Preview
+                        </div>
+                        <!---->
+                        <div class="item">
+                            <i class="icon announcement" ng-class="menuItem.icon"></i> Thing
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
     </div>
-
-    <div class="one wide column"></div>
-
-    <div class="five wide column">
-
-      <div class="ui menu blue inverted" ng-class="Layout.priMenuClasses" ng-init="colIndex=$index">
-        <!---->
-        <a class="item blue active" ng-class="tab.classes">
-          <span>Preview</span>
-        </a>
-        <a class="item blue" ng-class="tab.classes">
-          <span>Tab</span>
-        </a>
-        <!---->
-        <div class="right menu">
-          <a class="item" ui-popup="col.helpPopup">
-            <i class="help circle icon"></i>
-          </a>
-        </div>
-      </div>
-      <div class="ui tab segment blue active" ng-class="tab.classes">
-
-        <!---->
-        <div class="browser right" ng-class="[vm.col.label]">
-          <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
-            <img ng-src="chrome://favicon/http://pd75.github.io/" src="chrome://favicon/http://pd75.github.io/"> Practical Startpage Dev
-          </a>
-        </div>
-        <!---->
-        <div class="browser right" ng-class="[vm.col.label]">
-          <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
-            <img ng-src="http://www.slapyak.com/images/logo_yak.png" src="http://www.slapyak.com/images/logo_yak.png"> slapyak @ github
-          </a>
-        </div>
-        <!---->
-        <div class="browser right" ng-class="[vm.col.label]">
-          <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
-            <img ng-src="chrome://favicon/https://github.com/" src="chrome://favicon/https://github.com/"> GitHub
-          </a>
-        </div>
-        <!---->
-        <div class="browser right" ng-class="[vm.col.label]">
-          <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
-            <img ng-src="chrome://favicon/http://semantic-ui.com/" src="chrome://favicon/http://semantic-ui.com/"> Semantic UI
-          </a>
-        </div>
-        <!---->
-        <div class="browser right" ng-class="[vm.col.label]">
-          <a class="ui basic browser button blue" ng-class="vm.style.primaryCol">
-            <img ng-src="chrome://favicon/http://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon" src="chrome://favicon/http://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon"> How to code? - Stack Overflow
-          </a>
-        </div>
-        <!---->
-      </div>
-
-    </div>
-  </div>
 </div>
