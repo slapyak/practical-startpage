@@ -8,7 +8,10 @@
     function AppearanceCtrl(dataService, i18n) {
         var vm = this;
         vm.columns = [];
-        vm.toggleTheme = toggleTheme();
+        vm.toggleTheme = toggleTheme;
+        vm.choosePreset = choosePreset;
+        vm.undoChanges = undoChanges;
+        vm.setTheme = setTheme;
         vm.getData = getData;
         vm.getDefaults = getDefaults;
         vm.locale = locale;
@@ -50,6 +53,18 @@
         function handleUpdate(e) {
             document.documentElement.style.setProperty(`--${this.id}`, this.value);
             //console.log(`--${this.id}`, this.value);
+        }
+
+        function setTheme() {
+            //sets the currently previewed theme
+        }
+
+        function choosePreset() {
+            //sets the selected preset as the currently previewed theme
+        }
+
+        function undoChanges() {
+            //reverts the preview to the currently applied theme
         }
 
         function clear(appearance) {
