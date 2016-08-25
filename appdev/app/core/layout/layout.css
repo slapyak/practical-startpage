@@ -1,28 +1,3 @@
-/* Theming Controls */
-
-:root {
-    --pri_bg: #ffffff;
-    --pri_accent: #1560BD;
-    --pri_hover: #CCE2FF;
-    --pri_active: #4183C4;
-    --pri_text: #000000;
-    --sec_bg: #212121;
-    --sec_accent: #212121;
-    --sec_hover: #464646;
-    --sec_active: #333333;
-    --sec_text: #eeeeee;
-    /* automatically set variables */
-    --pri_warn: ;
-    --pri_err: ;
-    --pri_attn: ;
-    --sec_warn: ;
-    --sec_err: ;
-    --sec_attn: ;
-    --pri_inverted: ;
-    --sec_inverted: ;
-}
-
-
 /*Core*/
 
 html,

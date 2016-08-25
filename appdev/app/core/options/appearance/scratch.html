@@ -3,42 +3,34 @@
 <head>
     <script>
         // get the inputs
-        const inputs = [].slice.call(document.querySelectorAll('.controls input'));
+        const inputs = [].slice.call(document.querySelectorAll('.themeControls input'));
 
         // listen for changes
         inputs.forEach(input => input.addEventListener('change', handleUpdate));
 
         function handleUpdate(e) {
             // append 'px' to the end of spacing and blur variables
-            const suffix = (this.id === 'base' ? '' : 'px');
+            const suffix = (this.id === 'pri_bg' ? '' : 'px');
             document.documentElement.style.setProperty(`--${this.id}`, this.value + suffix);
         }
     </script>
     <style>
         :root {
-            --base: #ffc600;
+            --pri_bg: #ffc600;
         }
         
         .hl {
-            color: var(--base);
-        }
-        
-        a {
-            color: var(--base);
-            text-decoration: none;
-        }
-        
-        input {
-            width: 200px;
-        }
+            color: var(--pri_bg);
+        }        
+      
     </style>
 </head>
 
 <body>
     <span class='hl'>JS</span>
-    <div class="controls">
+    <div class="themeControls">
         <label>Base Color</label>
-        <input type="color" id="base" value="#ffc600">
+        <input type="color" id="pri_bg" value="#ffc600">
     </div>
 </body>
 
