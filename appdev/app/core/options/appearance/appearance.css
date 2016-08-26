@@ -1,7 +1,7 @@
 /* Theming Controls */
 
 :root {
-    --primary_bg: #ffffff;
+    --primary_bg: #c0c0c0;
     --primary_text: #000000;
     --primary_hover: #cccccc;
     --primary_active: #e0e0e0;
@@ -72,6 +72,12 @@ input {
     background-color: var(--secondary_bg)!important;
 }
 
+.main.row>.column .segment {
+    border-top: 2px solid var(--accent_bg);
+    background-color: var(--primary_bg);
+    color: var(--primary_text);
+}
+
 .column.tab:hover,
 .column.tab {
     background-color: var(--primary_bg)!important;
@@ -95,21 +101,80 @@ input {
 }
 
 .ui.menu.inverted .item {
+    background-color: var(--accent_bg)!important;
     color: var(--accent_text)!important;
+}
+
+.ui.menu.inverted .item:hover {
+    background-color: var(--accent_hover)!important;
 }
 
 .ui.menu:not(.inverted) .item.active {
     color: var(--primary_text)!important;
 }
 
+.ui.menu.inverted.blue .active.item,
 .ui.menu.inverted .item.active {
     color: var(--accent_text)!important;
+    background-color: var(--accent_active)!important;
 }
+
+.ui.menu.black.inverted,
+.ui.menu.bar {
+    background-color: var(--bar_bg)!important;
+    color: var(--bar_text)!important;
+}
+
+.ui.menu.black.inverted .header.item,
+.ui.menu.black.inverted .ui.item {
+    color: var(--bar_text)!important;
+    background-color: var(--bar_bg)!important;
+}
+
+.ui.menu.black.inverted .ui.item:hover,
+.ui.menu.black.inverted i.item:hover {
+    color: var(--bar_text)!important;
+    background-color: var(--bar_hover)!important;
+}
+
+.ui.menu.black.inverted .ui.item.active {
+    background-color: var(--bar_active)!important;
+}
+
+
+/*widget list*/
 
 ui.menu.inverted a.item:hover,
 ui.menu.inverted i.item:hover,
 ui.menu.inverted .item:hover {
     background-color: var(--accent_hover)!important;
+}
+
+.ui.basic.browser.button {
+    background-color: var(--item_bg)!important;
+    color: var(--item_text)!important;
+    box-shadow: 0 0 0 1px var(--primary_active) inset!important;
+}
+
+.ui.basic.browser.button:hover {
+    background-color: var(--item_hover)!important;
+    box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
+}
+
+.ui.basic.browser.button:visited {
+    background-color: var(--item_hover)!important;
+    box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
+}
+
+.widget.list > .item.visited {
+    background-color: var(--item_active)!important;
+}
+
+
+/*bookmarks list*/
+
+.ui.tab.segment li {
+    color: var(--primary_text)!important;
 }
 
 
@@ -119,7 +184,21 @@ ui.menu.inverted .item:hover {
     background-color: var(--preview_secondary_bg);
 }
 
-.column.tab {
+.main.row>.column .segment.preview {
+    border-top: 2px solid var(--preview_accent_bg);
     background-color: var(--preview_primary_bg);
     color: var(--preview_primary_text);
+}
+
+.ui.menu.preview {
+    background-color: var(--preview_accent_bg)!important;
+    color: var(--preview_accent_text)!important;
+}
+
+.ui.menu.preview .item {
+    color: var(--preview_accent_text)!important;
+}
+
+.ui.menu.preview .item.active {
+    color: var(--preview_accent_text)!important;
 }
