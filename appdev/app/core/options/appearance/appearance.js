@@ -55,16 +55,16 @@
     function handleUpdate(e) {
       var hValue = 0;
       var aValue = 0;
-      var hName = "";
-      var aName = "";
+      var hName = '';
+      var aName = '';
       const hoverOffset = 20;
       const activeOffset = 12;
       document.documentElement.style.setProperty(`--${this.id}`, this.value);
       //   if the item updated is a *_bg, set the hover and active values
       if (this.id.slice(-2) == "bg") {
         console.log("bg found");
-        hName.concat(this.id.slice(2 - this.id.length), 'hover');
-        aName.concat(this.id.slice(2 - this.id.length), 'active');
+        hName = '--'.concat(this.id.slice(0, this.id.length - 2), 'hover');
+        aName = '--'.concat(this.id.slice(0, this.id.length - 2), 'active');
         if (tinycolor(this.value).isLight()) {
           hValue = tinycolor(this.value).darken(hoverOffset).toString();
           aValue = tinycolor(this.value).darken(activeOffset).toString();
@@ -75,9 +75,9 @@
         document.documentElement.style.setProperty(hName, hValue);
         document.documentElement.style.setProperty(aName, aValue);
       }
-      //   console.log(`--${this.id}`, this.value);
-      //   console.log(hName, hValue);
-      //   console.log(aName, aValue);
+      console.log(`--${this.id}`, this.value);
+      console.log(hName, hValue);
+      console.log(aName, aValue);
     }
 
     function setTheme() {
