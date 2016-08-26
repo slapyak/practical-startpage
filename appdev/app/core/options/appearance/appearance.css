@@ -1,139 +1,174 @@
 /* Theming Controls */
 
 :root {
-    --pri_bg: #ffffff;
-    --pri_accent: #1560BD;
-    --pri_hover: #CCE2FF;
-    --pri_active: #4183C4;
-    --pri_text: #000000;
-    --sec_bg: #212121;
-    --sec_accent: #212121;
-    --sec_hover: #464646;
-    --sec_active: #333333;
-    --sec_text: #eeeeee;
-    /* calculated, fixed colors, (but changes for light or dark theme...) */
-    --pri_warn: #700000;
-    --pri_err: #700000;
-    --pri_attn: #700000;
-    --sec_warn: #700000;
-    --sec_err: #700000;
-    --sec_attn: #700000;
-    --pri_inverted: #700000;
-    --sec_inverted: #700000;
-    /* preview stuff */
-    --preview_pri_bg: #4184C6;
-    --preview_pri_accent: #f05010;
-    --preview_pri_hover: #CCE2FF;
-    --preview_pri_active: #4184c6;
-    --preview_pri_text: #000000;
-    --preview_sec_bg: #212121;
-    --preview_sec_accent: #212122;
-    --preview_sec_hover: #464646;
-    --preview_sec_active: #333333;
-    --preview_sec_text: #eeeeee;
-    /* fixed presets */
-    --preview_light_warn: #700000;
-    --preview_light_err: #d00000;
-    --preview_light_attn: #006030;
-    --preview_dark_warn: #d05050;
-    --preview_dark_err: #f00000;
-    --preview_dark_attn: #50f090;
-    --preview_pri_inverted: #d09030;
-    --preview_sec_inverted: #c0c0c0;
+  --primary_bg: #ffffff;
+  --primary_text: #000000;
+  --primary_hover: #cccccc;
+  --primary_active: #e0e0e0;
+  --accent_bg: #ff8000;
+  --accent_text: #000000;
+  --accent_hover: #994d00;
+  --accent_active: #c26100;
+  --item_bg: #00ff00;
+  --item_text: #222222;
+  --item_hover: #009900;
+  --item_active: #00c200;
+  --bar_bg: #0000a0;
+  --bar_text: #ffffff;
+  --bar_hover: #0707ff;
+  --bar_active: #0000dd;
+  --secondary_bg: #aaaaaa;
+  /**/
+  --preview_primary_bg: #ffffff;
+  --preview_primary_text: #000000;
+  --preview_primary_hover: #cccccc;
+  --preview_primary_active: #e0e0e0;
+  --preview_accent_bg: #ff8000;
+  --preview_accent_text: #000000;
+  --preview_accent_hover: #994d00;
+  --preview_accent_active: #c26100;
+  --preview_item_bg: #00ff00;
+  --preview_item_text: #222222;
+  --preview_item_hover: #009900;
+  --preview_item_active: #00c200;
+  --preview_bar_bg: #0000a0;
+  --preview_bar_text: #ffffff;
+  --preview_bar_hover: #0707ff;
+  --preview_bar_active: #0000dd;
+  --preview_secondary_bg: #aaaaaa;
+  /**/
+  --pri_accent: #1560BD;
+  --pri_hover: #CCE2FF;
+  --pri_active: #4183C4;
+  --pri_text: #000000;
+  --sec_bg: #212121;
+  --sec_accent: #212121;
+  --sec_hover: #464646;
+  --sec_active: #333333;
+  --sec_text: #eeeeee;
+  /* calculated, fixed colors, (but changes for light or dark theme...) */
+  --pri_warn: #700000;
+  --pri_err: #700000;
+  --pri_attn: #700000;
+  --sec_warn: #700000;
+  --sec_err: #700000;
+  --sec_attn: #700000;
+  --pri_inverted: #700000;
+  --sec_inverted: #700000;
+  /* preview stuff */
+  --preview_pri_bg: #4184C6;
+  --preview_pri_accent: #f05010;
+  --preview_pri_hover: #CCE2FF;
+  --preview_pri_active: #4184c6;
+  --preview_pri_text: #000000;
+  --preview_sec_bg: #212121;
+  --preview_sec_accent: #212122;
+  --preview_sec_hover: #464646;
+  --preview_sec_active: #333333;
+  --preview_sec_text: #eeeeee;
+  /* fixed presets */
+  --preview_light_warn: #700000;
+  --preview_light_err: #d00000;
+  --preview_light_attn: #006030;
+  --preview_dark_warn: #d05050;
+  --preview_dark_err: #f00000;
+  --preview_dark_attn: #50f090;
+  --preview_pri_inverted: #d09030;
+  --preview_sec_inverted: #c0c0c0;
 }
 
 input {
-    width: 40px
+  width: 40px
 }
 
 .preview_pri_bg {
-    color: var(--preview_pri_bg);
+  color: var(--preview_pri_bg);
 }
 
 .preview_pri_accent {
-    color: var(--preview_pri_accent);
+  color: var(--preview_pri_accent);
 }
 
 .preview_pri_hover {
-    color: var(--preview_pri_hover);
+  color: var(--preview_pri_hover);
 }
 
 .preview_pri_active {
-    color: var(--preview_pri_active);
+  color: var(--preview_pri_active);
 }
 
 .preview_pri_text {
-    color: var(--preview_pri_text);
+  color: var(--preview_pri_text);
 }
 
 .preview_sec_bg {
-    color: var(--preview_sec_bg);
+  color: var(--preview_sec_bg);
 }
 
 .preview_sec_accent {
-    color: var(--preview_sec_accent);
+  color: var(--preview_sec_accent);
 }
 
 .preview_sec_hover {
-    color: var(--preview_sec_hover);
+  color: var(--preview_sec_hover);
 }
 
 .preview_sec_active {
-    color: var(--preview_sec_active);
+  color: var(--preview_sec_active);
 }
 
 .preview_sec_text {
-    color: var(--preview_sec_text);
+  color: var(--preview_sec_text);
 }
 
 .preview_light_warn {
-    color: var(--preview_light_warn);
+  color: var(--preview_light_warn);
 }
 
 .preview_light_err {
-    color: var(--preview_light_err);
+  color: var(--preview_light_err);
 }
 
 .preview_light_attn {
-    color: var(--preview_light_attn);
+  color: var(--preview_light_attn);
 }
 
 .preview_dark_warn {
-    color: var(--preview_dark_warn);
+  color: var(--preview_dark_warn);
 }
 
 .preview_dark_err {
-    color: var(--preview_dark_err);
+  color: var(--preview_dark_err);
 }
 
 .preview_dark_attn {
-    color: var(--preview_dark_attn);
+  color: var(--preview_dark_attn);
 }
 
 .preview_pri_inverted {
-    color: var(--preview_pri_inverted);
+  color: var(--preview_pri_inverted);
 }
 
 .preview_sec_inverted {
-    color: var(--preview_sec_inverted);
+  color: var(--preview_sec_inverted);
 }
 
 
 /* preview_pri_accent REPLACEMENTS */
 
 .ui.pri.segment:not(.inverted) {
-    border-top: 2px solid var(--preview_pri_accent);
-    background: var(--preview_pri_bg);
-    color: var(--preview_pri_text);
+  border-top: 2px solid var(--preview_pri_accent);
+  background: var(--preview_pri_bg);
+  color: var(--preview_pri_text);
 }
 
-.ui.inverted.pri.menu,
-.ui.inverted.menu .pri.active.item {
-    background-color: var(--preview_pri_accent);
+.ui.preview_accent.menu,
+.ui.preview_accent.menu .preview_accent.active.item {
+  background-color: var(--preview_accent_bg);
 }
 
-.ui.inverted.pri.menu .active.item {
-    background: var(--preview_pri_active);
+.ui.preview_accent.menu .active.item {
+  background-color: var(--preview_accent_active);
 }
 
 
@@ -143,8 +178,8 @@ input {
 .ui.inverted.menu .link.item:hover,
 .ui.inverted.menu a.item:hover,
 .ui.link.inverted.menu .item:hover {
-    background: rgba(255, 255, 255, .25);
-    color: #ffffff;
+  background: rgba(255, 255, 255, .25);
+  color: #ffffff;
 }
 
 
@@ -154,6 +189,6 @@ input {
 .ui.menu .link.item:hover,
 .ui.menu a.item:hover,
 .ui.link.menu .item:hover {
-    background: rgba(0, 0, 0, .10);
-    color: #000000;
+  background: rgba(0, 0, 0, .10);
+  color: #000000;
 }
