@@ -3,9 +3,8 @@
 .browser {
   display: inline-block;
 }
+
 .ui.basic.browser.button {
-  box-shadow: 0 0 0 1px #cccccc !important;
-  color: #888888 !important;
   margin: 2px;
   padding: .6em;
   text-align: left;
@@ -14,64 +13,74 @@
   overflow: hidden;
   width: 99%;
 }
-.browser.button > img {
+
+.browser.button> img {
   margin: -0.1em 0.2em -0.1em 0.1em;
   height: 16px;
 }
+
 .browser.item {
   overflow: hidden;
   white-space: nowrap;
 }
-.browser.item > .content > .description {
+
+.browser.item> .content> .description {
   overflow: hidden;
   white-space: normal;
 }
 
+
 /*Widget Lists*/
+
 
 /*Icon*/
 
-.widget.list > .item > i.icon > .icon.image{
-  height :16px;
+.widget.list> .item> i.icon> .icon.image {
+  height: 16px;
   max-width: none;
 }
 
+
 /* Content*/
 
-.widget.list > .item {
+.widget.list> .item {
   display: flex !important;
   flex-direction: row;
   max-width: 100%;
 }
 
-.widget.list > .item > .content {
+.widget.list> .item> .content {
   flex: 1;
-  min-width:0;
+  min-width: 0;
 }
 
-.widget.list > .item > .content > .header {
+.widget.list> .item> .content> .header {
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow:hidden;
+  overflow: hidden;
 }
 
-.widget.list > .item > .content > .description.url {
+.widget.list> .item> .content> .description.url {
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow:hidden;
+  overflow: hidden;
 }
 
-.widget.list > .item > .content > .meta > .date {
+.widget.list> .item> .content> .meta> .date {
   font-size: .9em;
 }
+
+
 /*Effects*/
 
-.widget.list > .item.visited {
-  background-color: rgba(0,0,0,.075);
+.widget.list> .item.visited {
+  background-color: var(--item_bg_active);
 }
-.widget.list > .item > .content > .content > .icon:not(:hover){
-  opacity:0.5
+
+.widget.list> .item> .content> .content> .icon:not(:hover) {
+  opacity: 0.5
 }
-.widget.list > .item:not(:hover) > .content > .content > .icon{
-  opacity:0
+
+.widget.list> .item:not(:hover)> .content> .content> .icon {
+  opacity: 0
 }
