@@ -67,10 +67,18 @@ input {
 
 /* preview_pri_accent REPLACEMENTS */
 
+.preview_content {
+  color: var(--preview_primary_text);
+}
+
 .ui.preview_content.segment:not(.inverted) {
   border-top: 2px solid var(--preview_accent_bg);
   background: var(--preview_primary_bg);
   color: var(--preview_primary_text);
+}
+
+.ui.segment.preview_accent {
+  background: var(--preview_accent_bg);
 }
 
 .ui.preview_accent.menu,
