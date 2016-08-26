@@ -5,8 +5,8 @@
 }
 
 .ui.basic.browser.button {
-    box-shadow: 0 0 0 1px #cccccc !important;
-    color: #888888 !important;
+    box-shadow: 0 0 0 1px #cccccc;
+    color: #888888;
     margin: 2px;
     padding: .6em;
     text-align: left;
