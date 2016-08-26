@@ -1,32 +1,34 @@
 /*Widget buttons*/
 
 .browser {
-  display: inline-block;
+    display: inline-block;
 }
 
 .ui.basic.browser.button {
-  margin: 2px;
-  padding: .6em;
-  text-align: left;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 99%;
+    box-shadow: 0 0 0 1px #cccccc !important;
+    color: #888888 !important;
+    margin: 2px;
+    padding: .6em;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 99%;
 }
 
-.browser.button> img {
-  margin: -0.1em 0.2em -0.1em 0.1em;
-  height: 16px;
+.browser.button > img {
+    margin: -0.1em 0.2em -0.1em 0.1em;
+    height: 16px;
 }
 
 .browser.item {
-  overflow: hidden;
-  white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.browser.item> .content> .description {
-  overflow: hidden;
-  white-space: normal;
+.browser.item > .content > .description {
+    overflow: hidden;
+    white-space: normal;
 }
 
 
@@ -35,52 +37,52 @@
 
 /*Icon*/
 
-.widget.list> .item> i.icon> .icon.image {
-  height: 16px;
-  max-width: none;
+.widget.list > .item > i.icon > .icon.image {
+    height: 16px;
+    max-width: none;
 }
 
 
 /* Content*/
 
-.widget.list> .item {
-  display: flex !important;
-  flex-direction: row;
-  max-width: 100%;
+.widget.list > .item {
+    display: flex !important;
+    flex-direction: row;
+    max-width: 100%;
 }
 
-.widget.list> .item> .content {
-  flex: 1;
-  min-width: 0;
+.widget.list > .item > .content {
+    flex: 1;
+    min-width: 0;
 }
 
-.widget.list> .item> .content> .header {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.widget.list > .item > .content > .header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.widget.list> .item> .content> .description.url {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.widget.list > .item > .content > .description.url {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.widget.list> .item> .content> .meta> .date {
-  font-size: .9em;
+.widget.list > .item > .content > .meta > .date {
+    font-size: .9em;
 }
 
 
 /*Effects*/
 
-.widget.list> .item.visited {
-  background-color: var(--item_bg_active);
+.widget.list > .item.visited {
+    background-color: rgba(0, 0, 0, .075);
 }
 
-.widget.list> .item> .content> .content> .icon:not(:hover) {
-  opacity: 0.5
+.widget.list > .item > .content > .content > .icon:not(:hover) {
+    opacity: 0.5
 }
 
-.widget.list> .item:not(:hover)> .content> .content> .icon {
-  opacity: 0
+.widget.list > .item:not(:hover) > .content > .content > .icon {
+    opacity: 0
 }
