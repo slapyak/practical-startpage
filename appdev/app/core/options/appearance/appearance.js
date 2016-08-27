@@ -35,12 +35,13 @@
     activate();
 
     function activate() {
-      getData(); //get the current colors used, preset the input colors to that value
+      getData(); //get the stored theme colors used, preset the input colors to that value
       dataService.setOnChangeData('appearance', getData);
       // get the inputs
       var bodyStyles = window.getComputedStyle(document.body);
       var inputs = [].slice.call(document.querySelectorAll('.themeControls input'));
       document.getElementById('applyBut').addEventListener('click', setTheme);
+      document.getElementById('themePicker').addEventListener('change', choosePreset);
       inputs.forEach(function(input) {
         var str = bodyStyles.getPropertyValue(`--${input.id}`);
         //console.log(str);
@@ -101,10 +102,65 @@
       document.documentElement.style.setProperty('--bar_hover', bodyStyles.getPropertyValue('--preview_bar_hover'));
       document.documentElement.style.setProperty('--bar_active', bodyStyles.getPropertyValue('--preview_bar_active'));
       document.documentElement.style.setProperty('--secondary_bg', bodyStyles.getPropertyValue('--preview_secondary_bg'));
+      //save to local file?
     }
 
-    function choosePreset() {
+    function choosePreset(e) {
       //sets the selected preset as the currently previewed theme
+      console.log("preset selected", this.value);
+      var selectedTheme = {};
+      const lightTheme = {
+        '--preview_primary_bg': '#EEEEEE',
+        '--preview_primary_text': '#000000',
+        '--preview_primary_hover': '#bbbbbb',
+        '--preview_primary_active': '#cfcfcf',
+        '--preview_accent_bg': '#3F51B5',
+        '--preview_accent_text': '#ffffff',
+        '--preview_accent_hover': '#8591d5',
+        '--preview_accent_active': '#6776ca',
+        '--preview_item_bg': '#E8EAF6',
+        '--preview_item_text': '#222222',
+        '--preview_item_hover': '#9fa7d9',
+        '--preview_item_active': '#bcc2e5',
+        '--preview_bar_bg': '#000070',
+        '--preview_bar_text': '#ffffff',
+        '--preview_bar_hover': '#0000d6',
+        '--preview_bar_active': '#0000ad',
+        '--preview_secondary_bg': '#E0E0E0'
+      };
+      const darkTheme = {
+        '--preview_primary_bg': '#262626',
+        '--preview_primary_text': '#D3D3D3',
+        '--preview_primary_hover': '#595959',
+        '--preview_primary_active': '#454545',
+        '--preview_accent_bg': '#00A478',
+        '--preview_accent_text': '#ffffff',
+        '--preview_accent_hover': '#003e2d',
+        '--preview_accent_active': '#00674b',
+        '--preview_item_bg': '#373737',
+        '--preview_item_text': '#D3D3D3',
+        '--preview_item_hover': '#6a6a6a',
+        '--preview_item_active': '#565656',
+        '--preview_bar_bg': '#060606',
+        '--preview_bar_text': '#ffffff',
+        '--preview_bar_hover': '#393939',
+        '--preview_bar_active': '#252525',
+        '--preview_secondary_bg': '#696969'
+      };
+      switch (document.getElementById('themePicker').value) {
+        case "0":
+          selectedTheme = lightTheme;
+          break;
+        case "1":
+          selectedTheme = darkTheme;
+          break;
+        default:
+          break;
+      }
+      for (var key in selectedTheme) {
+        document.documentElement.style.setProperty(key, selectedTheme[key]);
+        console.log(key, selectedTheme[key])
+      }
     }
 
     function undoChanges() {
