@@ -155,3 +155,15 @@
     };
   }
 })(angular);
+
+// 
+// function GetColors(text)) {
+//   var inval = '#E8EAF6';
+//   if (tinycolor(inval).getLuminance() > 0.2) {
+//     console.log(tinycolor(inval).darken(hoverOffset).toString());
+//     console.log(tinycolor(inval).darken(activeOffset).toString());
+//   } else {
+//     console.log(tinycolor(inval).lighten(hoverOffset).toString());
+//     console.log(tinycolor(inval).lighten(activeOffset).toString());
+//   }
+// }

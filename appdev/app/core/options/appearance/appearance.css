@@ -1,41 +1,41 @@
 /* Theming Controls */
 
 :root {
-  --primary_bg: #c0c0c0;
+  --primary_bg: #EEEEEE;
   --primary_text: #000000;
-  --primary_hover: #cccccc;
-  --primary_active: #e0e0e0;
-  --accent_bg: #ff8000;
-  --accent_text: #000000;
-  --accent_hover: #994d00;
-  --accent_active: #c26100;
-  --item_bg: #00ff00;
+  --primary_hover: #bbbbbb;
+  --primary_active: #cfcfcf;
+  --accent_bg: #3F51B5;
+  --accent_text: #ffffff;
+  --accent_hover: #8591d5;
+  --accent_active: #6776ca;
+  --item_bg: #E8EAF6;
   --item_text: #222222;
-  --item_hover: #009900;
-  --item_active: #00c200;
-  --bar_bg: #0000a0;
+  --item_hover: #9fa7d9;
+  --item_active: #bcc2e5;
+  --bar_bg: #000070;
   --bar_text: #ffffff;
-  --bar_hover: #0707ff;
-  --bar_active: #0000dd;
-  --secondary_bg: #aaaaaa;
+  --bar_hover: #0000d6;
+  --bar_active: #0000ad;
+  --secondary_bg: #E0E0E0;
   /**/
-  --preview_primary_bg: #ffffff;
-  --preview_primary_text: #000000;
-  --preview_primary_hover: #cccccc;
-  --preview_primary_active: #e0e0e0;
-  --preview_accent_bg: #ff8000;
-  --preview_accent_text: #000000;
-  --preview_accent_hover: #994d00;
-  --preview_accent_active: #c26100;
-  --preview_item_bg: #00ff00;
-  --preview_item_text: #222222;
-  --preview_item_hover: #009900;
-  --preview_item_active: #00c200;
-  --preview_bar_bg: #0000a0;
+  --preview_primary_bg: #262626;
+  --preview_primary_text: #D3D3D3;
+  --preview_primary_hover: #595959;
+  --preview_primary_active: #454545;
+  --preview_accent_bg: #00A478;
+  --preview_accent_text: #ffffff;
+  --preview_accent_hover: #003e2d;
+  --preview_accent_active: #00674b;
+  --preview_item_bg: #373737;
+  --preview_item_text: #D3D3D3;
+  --preview_item_hover: #6a6a6a;
+  --preview_item_active: #565656;
+  --preview_bar_bg: #060606;
   --preview_bar_text: #ffffff;
-  --preview_bar_hover: #0707ff;
-  --preview_bar_active: #0000dd;
-  --preview_secondary_bg: #aaaaaa;
+  --preview_bar_hover: #393939;
+  --preview_bar_active: #252525;
+  --preview_secondary_bg: #696969;
   /* calculated, fixed colors, (but changes for light or dark theme...) */
   --pri_warn: #700000;
   --pri_err: #700000;
@@ -157,13 +157,14 @@ ui.menu.inverted .item:hover {
   box-shadow: 0 0 0 1px var(--primary_active) inset!important;
 }
 
-.ui.basic.browser.button:hover {
-  background-color: var(--item_hover)!important;
+.ui.basic.browser.button:visited {
+  background-color: var(--item_active)!important;
   box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
 }
 
-.ui.basic.browser.button:visited {
+.ui.basic.browser.button:hover {
   background-color: var(--item_hover)!important;
+  color: var(--item_text)!important;
   box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
 }
 
