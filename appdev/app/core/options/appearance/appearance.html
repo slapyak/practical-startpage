@@ -1,197 +1,197 @@
 <div class="ui grid">
-    <div class="row">
-        <div class="ten wide column">
-            <select id="themePicker" class="ui dropdown">
-              <option value="">Theme Presets</option>
-              <option value="1">Light</option>
-              <option value="0">Dark</option>
-            </select>
-            <button class="ui right floated button" ng-class="vm.styles.secButton" ng-click="vm.undo()">
-              Undo
-            </button>
-            <button id="applyBut" class="ui right floated button" ng-class="vm.styles.Button" ng-click="vm.apply()">
-              Apply
-            </button>
+  <div class="row">
+    <div class="ten wide column">
+      <select id="themePicker" class="ui dropdown">
+        <option value="">Theme Presets</option>
+        <option value="1">Light</option>
+        <option value="0">Dark</option>
+      </select>
+      <button class="ui right floated button" ng-class="vm.styles.secButton" ng-click="vm.undo()">
+        Undo
+      </button>
+      <button id="applyBut" class="ui right floated button" ng-class="vm.styles.Button" ng-click="vm.apply()">
+        Apply
+      </button>
 
-            <div class="ui divider"></div>
-            <div class="themeControls">
-                <table class="ui very basic unstackable compact table">
-                    <thead>
-                        <tr>
-                            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
-                            <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
-                            <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
-                            <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2" class="right aligned">
-                                Content Background
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_primary_bg" value="#ffffff">
-                            </td>
-                            <td colspan="2" class="right aligned">
-                                Primary Text
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_primary_text" value="#212121">
-                            </td>
-                        </tr>
+      <div class="ui divider"></div>
+      <div class="themeControls">
+        <table class="ui very basic unstackable compact table">
+          <thead>
+            <tr>
+              <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+              <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
+              <th colspan="2" class="right aligned" ps-i18n="c_o_themeObject"></th>
+              <th colspan="1" class="center aligned" ps-i18n="c_o_themeColor"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2" class="right aligned">
+                Content Background
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_primary_bg" value="#ffffff">
+              </td>
+              <td colspan="2" class="right aligned">
+                Primary Text
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_primary_text" value="#212121">
+              </td>
+            </tr>
 
-                        <tr>
-                            <td colspan="2" class="right aligned">
-                                Accent Color
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <div class="themeControls">
-                                    <input type="color" id="preview_accent_bg" value="#1560BD">
-                                </div>
-                            </td>
-                            <td colspan="2" class="right aligned">
-                                Accent Text
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_accent_text" value="#212121">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2" class="right aligned">
-                                Item Color
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_item_bg" value="#CCE2FF">
-                            </td>
-                            <td colspan="2" class="right aligned">
-                                Item Text
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_item_text" value="#464646">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2" class="right aligned">
-                                Bar Color
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_bar_bg" value="#4183C4">
-                            </td>
-                            <td colspan="2" class="right aligned">
-                                Bar Text
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_bar_text" value="#333333">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2" class="right aligned">
-                                Background
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <input type="color" id="preview_secondary_bg" value="#000000">
-                            </td>
-                            <td colspan="2" class="right aligned">
-
-                            </td>
-                            <td colspan="1" class="center aligned">
-                                <!--<input type="color" id="preview_sec_text" value="#eeeeee">-->
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="one wide column"></div>
-
-        <div class="five wide column main preview">
-
-            <div class="ui menu preview" ng-class="Layout.priMenuClasses" ng-init="colIndex=$index">
-                <!---->
-                <a class="item preview active" ng-class="tab.classes">
-                    <span>Preview</span>
-                </a>
-                <a class="item preview" ng-class="tab.classes">
-                    <span>Tab</span>
-                </a>
-                <!---->
-                <div class="right menu">
-                    <a class="item preview" ui-popup="col.helpPopup">
-                        <i class="help circle icon"></i>
-                    </a>
+            <tr>
+              <td colspan="2" class="right aligned">
+                Accent Color
+              </td>
+              <td colspan="1" class="center aligned">
+                <div class="themeControls">
+                  <input type="color" id="preview_accent_bg" value="#1560BD">
                 </div>
-            </div>
-            <div class="ui tab segment preview active" ng-class="tab.classes">
-                <div class="browser right" ng-class="[vm.col.label]">
-                    <center>
-                        <span class="preview">Example primary text
+              </td>
+              <td colspan="2" class="right aligned">
+                Accent Text
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_accent_text" value="#212121">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="right aligned">
+                Item Color
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_item_bg" value="#CCE2FF">
+              </td>
+              <td colspan="2" class="right aligned">
+                Item Text
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_item_text" value="#464646">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="right aligned">
+                Bar Color
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_bar_bg" value="#4183C4">
+              </td>
+              <td colspan="2" class="right aligned">
+                Bar Text
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_bar_text" value="#333333">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="right aligned">
+                Background
+              </td>
+              <td colspan="1" class="center aligned">
+                <input type="color" id="preview_secondary_bg" value="#000000">
+              </td>
+              <td colspan="2" class="right aligned">
+
+              </td>
+              <td colspan="1" class="center aligned">
+                <!--<input type="color" id="preview_sec_text" value="#eeeeee">-->
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="one wide column"></div>
+
+    <div class="five wide column main preview">
+
+      <div class="ui menu preview" ng-class="Layout.priMenuClasses" ng-init="colIndex=$index">
+        <!---->
+        <a class="item preview active" ng-class="tab.classes">
+          <span>Preview</span>
+        </a>
+        <a class="item preview" ng-class="tab.classes">
+          <span>Tab</span>
+        </a>
+        <!---->
+        <div class="right menu">
+          <a class="item preview" ui-popup="col.helpPopup">
+            <i class="help circle icon"></i>
+          </a>
+        </div>
+      </div>
+      <div class="ui tab segment preview active" ng-class="tab.classes">
+        <div class="browser right" ng-class="[vm.col.label]">
+          <center>
+            <span class="preview text">Example primary text
               <br>
             </span>
-                    </center>
-                </div>
-                <!---->
-                <div class="browser right" ng-class="[vm.col.label]">
-                    <a class="ui basic browser  preview button" ng-class="vm.style.primaryCol">
-                        <img ng-src="chrome://favicon/http://pd75.github.io/" src="chrome://favicon/http://pd75.github.io/"> Practical Startpage Dev
-                    </a>
-                </div>
-                <!---->
-                <div class="browser right" ng-class="[vm.col.label]">
-                    <a class="ui basic browser preview button" ng-class="vm.style.primaryCol">
-                        <img ng-src="http://www.slapyak.com/images/logo_yak.png" src="http://www.slapyak.com/images/logo_yak.png"> slapyak @ github
-                    </a>
-                </div>
-                <!---->
-                <div class="browser right" ng-class="[vm.col.label]">
-                    <a class="ui basic browser preview button" ng-class="vm.style.primaryCol">
-                        <img ng-src="chrome://favicon/https://github.com/" src="chrome://favicon/https://github.com/"> GitHub
-                    </a>
-                </div>
-                <!---->
-                <div class="browser right" ng-class="[vm.col.label]">
-                    <a class="ui basic browser preview button" ng-class="vm.style.primaryCol">
-                        <img ng-src="http://semantic-ui.com/images/logo.png" src="http://semantic-ui.com/images/logo.png"> Semantic UI
-                    </a>
-                </div>
-                <!---->
-            </div>
-            <!-- end of the list -->
-
-            <div class="ui menu preview_bar">
-                <div class="header item preview_bar">
-                    Theme
-                </div>
-
-                <div class="ui icon bottom right pointing dropdown item" ui-dropdown="" tabindex="0">
-                    <i class="setting icon"></i>
-                    <div class="menu transition hidden" tabindex="-1">
-                        <!---->
-                        <div class="item active selected">
-                            <i class="icon options" ng-class="menuItem.icon"></i> Example
-                        </div>
-                        <!---->
-                        <div class="item">
-                            <i class="icon help" ng-class="menuItem.icon"></i> Menu
-                        </div>
-                        <!---->
-                        <div class="item">
-                            <i class="icon info" ng-class="menuItem.icon"></i> Preview
-                        </div>
-                        <!---->
-                        <div class="item">
-                            <i class="icon announcement" ng-class="menuItem.icon"></i> Thing
-                        </div>
-                        <!---->
-                    </div>
-                </div>
-            </div>
-
-
+          </center>
         </div>
+        <!---->
+        <div class="browser right" ng-class="[vm.col.label]">
+          <a class="ui basic browser  preview button" ng-class="vm.style.primaryCol">
+            <img ng-src="chrome://favicon/http://pd75.github.io/" src="chrome://favicon/http://pd75.github.io/"> Practical Startpage Dev
+          </a>
+        </div>
+        <!---->
+        <div class="browser right" ng-class="[vm.col.label]">
+          <a class="ui basic browser preview button" ng-class="vm.style.primaryCol">
+            <img ng-src="http://www.slapyak.com/images/logo_yak.png" src="http://www.slapyak.com/images/logo_yak.png"> slapyak @ github
+          </a>
+        </div>
+        <!---->
+        <div class="browser right" ng-class="[vm.col.label]">
+          <a class="ui basic browser preview button" ng-class="vm.style.primaryCol">
+            <img ng-src="chrome://favicon/https://github.com/" src="chrome://favicon/https://github.com/"> GitHub
+          </a>
+        </div>
+        <!---->
+        <div class="browser right" ng-class="[vm.col.label]">
+          <a class="ui basic browser preview button" ng-class="vm.style.primaryCol">
+            <img ng-src="http://semantic-ui.com/images/logo.png" src="http://semantic-ui.com/images/logo.png"> Semantic UI
+          </a>
+        </div>
+        <!---->
+      </div>
+      <!-- end of the list -->
+
+      <div class="ui menu preview bar">
+        <div class="header item preview bar">
+          Theme
+        </div>
+
+        <div class="ui icon bottom right pointing dropdown item" ui-dropdown="" tabindex="0">
+          <i class="setting icon"></i>
+          <div class="menu transition hidden" tabindex="-1">
+            <!---->
+            <div class="item active selected">
+              <i class="icon options" ng-class="menuItem.icon"></i> Example
+            </div>
+            <!---->
+            <div class="item">
+              <i class="icon help" ng-class="menuItem.icon"></i> Menu
+            </div>
+            <!---->
+            <div class="item">
+              <i class="icon info" ng-class="menuItem.icon"></i> Preview
+            </div>
+            <!---->
+            <div class="item">
+              <i class="icon announcement" ng-class="menuItem.icon"></i> Thing
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+
+
     </div>
+  </div>
 </div>

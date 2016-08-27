@@ -1,144 +1,145 @@
 /* Theming Controls */
 
 :root {
-    --primary_bg: #c0c0c0;
-    --primary_text: #000000;
-    --primary_hover: #cccccc;
-    --primary_active: #e0e0e0;
-    --accent_bg: #ff8000;
-    --accent_text: #000000;
-    --accent_hover: #994d00;
-    --accent_active: #c26100;
-    --item_bg: #00ff00;
-    --item_text: #222222;
-    --item_hover: #009900;
-    --item_active: #00c200;
-    --bar_bg: #0000a0;
-    --bar_text: #ffffff;
-    --bar_hover: #0707ff;
-    --bar_active: #0000dd;
-    --secondary_bg: #aaaaaa;
-    /**/
-    --preview_primary_bg: #ffffff;
-    --preview_primary_text: #000000;
-    --preview_primary_hover: #cccccc;
-    --preview_primary_active: #e0e0e0;
-    --preview_accent_bg: #ff8000;
-    --preview_accent_text: #000000;
-    --preview_accent_hover: #994d00;
-    --preview_accent_active: #c26100;
-    --preview_item_bg: #00ff00;
-    --preview_item_text: #222222;
-    --preview_item_hover: #009900;
-    --preview_item_active: #00c200;
-    --preview_bar_bg: #0000a0;
-    --preview_bar_text: #ffffff;
-    --preview_bar_hover: #0707ff;
-    --preview_bar_active: #0000dd;
-    --preview_secondary_bg: #aaaaaa;
-    /* calculated, fixed colors, (but changes for light or dark theme...) */
-    --pri_warn: #700000;
-    --pri_err: #700000;
-    --pri_attn: #700000;
-    --sec_warn: #700000;
-    --sec_err: #700000;
-    --sec_attn: #700000;
-    --pri_inverted: #700000;
-    --sec_inverted: #700000;
-    /* fixed presets */
-    --preview_light_warn: #700000;
-    --preview_light_err: #d00000;
-    --preview_light_attn: #006030;
-    --preview_dark_warn: #d05050;
-    --preview_dark_err: #f00000;
-    --preview_dark_attn: #50f090;
-    --preview_pri_inverted: #d09030;
-    --preview_sec_inverted: #c0c0c0;
+  --primary_bg: #c0c0c0;
+  --primary_text: #000000;
+  --primary_hover: #cccccc;
+  --primary_active: #e0e0e0;
+  --accent_bg: #ff8000;
+  --accent_text: #000000;
+  --accent_hover: #994d00;
+  --accent_active: #c26100;
+  --item_bg: #00ff00;
+  --item_text: #222222;
+  --item_hover: #009900;
+  --item_active: #00c200;
+  --bar_bg: #0000a0;
+  --bar_text: #ffffff;
+  --bar_hover: #0707ff;
+  --bar_active: #0000dd;
+  --secondary_bg: #aaaaaa;
+  /**/
+  --preview_primary_bg: #ffffff;
+  --preview_primary_text: #000000;
+  --preview_primary_hover: #cccccc;
+  --preview_primary_active: #e0e0e0;
+  --preview_accent_bg: #ff8000;
+  --preview_accent_text: #000000;
+  --preview_accent_hover: #994d00;
+  --preview_accent_active: #c26100;
+  --preview_item_bg: #00ff00;
+  --preview_item_text: #222222;
+  --preview_item_hover: #009900;
+  --preview_item_active: #00c200;
+  --preview_bar_bg: #0000a0;
+  --preview_bar_text: #ffffff;
+  --preview_bar_hover: #0707ff;
+  --preview_bar_active: #0000dd;
+  --preview_secondary_bg: #aaaaaa;
+  /* calculated, fixed colors, (but changes for light or dark theme...) */
+  --pri_warn: #700000;
+  --pri_err: #700000;
+  --pri_attn: #700000;
+  --sec_warn: #700000;
+  --sec_err: #700000;
+  --sec_attn: #700000;
+  --pri_inverted: #700000;
+  --sec_inverted: #700000;
+  /* fixed presets */
+  --preview_light_warn: #700000;
+  --preview_light_err: #d00000;
+  --preview_light_attn: #006030;
+  --preview_dark_warn: #d05050;
+  --preview_dark_err: #f00000;
+  --preview_dark_attn: #50f090;
+  --preview_pri_inverted: #d09030;
+  --preview_sec_inverted: #c0c0c0;
 }
 
 input {
-    width: 40px
+  width: 40px
 }
 
 .menu>.item:last-child {
-    border-radius: 0 .28571429rem .28571429rem 0
+  border-radius: 0 .28571429rem .28571429rem 0
 }
 
 
 /*container types
   content is all in column*/
 
+.menu.row,
 .main.row {
-    background-color: var(--secondary_bg)!important;
+  background-color: var(--secondary_bg)!important;
 }
 
 .main.row>.column .segment {
-    border-top: 2px solid var(--accent_bg);
-    background-color: var(--primary_bg);
-    color: var(--primary_text);
+  border-top: 2px solid var(--accent_bg);
+  background-color: var(--primary_bg);
+  color: var(--primary_text);
 }
 
 .column.tab:hover,
 .column.tab {
-    background-color: var(--primary_bg)!important;
-    color: var(--primary_text)!important;
+  background-color: var(--primary_bg)!important;
+  color: var(--primary_text)!important;
 }
 
 .ui.menu.inverted,
 .ui.menu.accent {
-    background-color: var(--accent_bg)!important;
-    color: var(--accent_text)!important;
+  background-color: var(--accent_bg)!important;
+  color: var(--accent_text)!important;
 }
 
 .ui.menu:not(.inverted),
 .ui.menu.content {
-    background-color: var(--primary_bg)!important;
-    color: var(--primary_text)!important;
+  background-color: var(--primary_bg)!important;
+  color: var(--primary_text)!important;
 }
 
 .ui.menu:not(.inverted) .item {
-    color: var(--primary_text)!important;
+  color: var(--primary_text)!important;
 }
 
 .ui.menu.inverted .item {
-    background-color: var(--accent_bg)!important;
-    color: var(--accent_text)!important;
+  background-color: var(--accent_bg)!important;
+  color: var(--accent_text)!important;
 }
 
 .ui.menu.inverted .item:hover {
-    background-color: var(--accent_hover)!important;
+  background-color: var(--accent_hover)!important;
 }
 
 .ui.menu:not(.inverted) .item.active {
-    color: var(--primary_text)!important;
+  color: var(--primary_text)!important;
 }
 
 .ui.menu.inverted.blue .active.item,
 .ui.menu.inverted .item.active {
-    color: var(--accent_text)!important;
-    background-color: var(--accent_active)!important;
+  color: var(--accent_text)!important;
+  background-color: var(--accent_active)!important;
 }
 
 .ui.menu.black.inverted,
 .ui.menu.bar {
-    background-color: var(--bar_bg)!important;
-    color: var(--bar_text)!important;
+  background-color: var(--bar_bg)!important;
+  color: var(--bar_text)!important;
 }
 
 .ui.menu.black.inverted .header.item,
 .ui.menu.black.inverted .ui.item {
-    color: var(--bar_text)!important;
-    background-color: var(--bar_bg)!important;
+  color: var(--bar_text)!important;
+  background-color: var(--bar_bg)!important;
 }
 
 .ui.menu.black.inverted .ui.item:hover,
 .ui.menu.black.inverted i.item:hover {
-    color: var(--bar_text)!important;
-    background-color: var(--bar_hover)!important;
+  color: var(--bar_text)!important;
+  background-color: var(--bar_hover)!important;
 }
 
 .ui.menu.black.inverted .ui.item.active {
-    background-color: var(--bar_active)!important;
+  background-color: var(--bar_active)!important;
 }
 
 
@@ -147,58 +148,106 @@ input {
 ui.menu.inverted a.item:hover,
 ui.menu.inverted i.item:hover,
 ui.menu.inverted .item:hover {
-    background-color: var(--accent_hover)!important;
+  background-color: var(--accent_hover)!important;
 }
 
 .ui.basic.browser.button {
-    background-color: var(--item_bg)!important;
-    color: var(--item_text)!important;
-    box-shadow: 0 0 0 1px var(--primary_active) inset!important;
+  background-color: var(--item_bg)!important;
+  color: var(--item_text)!important;
+  box-shadow: 0 0 0 1px var(--primary_active) inset!important;
 }
 
 .ui.basic.browser.button:hover {
-    background-color: var(--item_hover)!important;
-    box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
+  background-color: var(--item_hover)!important;
+  box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
 }
 
 .ui.basic.browser.button:visited {
-    background-color: var(--item_hover)!important;
-    box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
+  background-color: var(--item_hover)!important;
+  box-shadow: 0 0 0 1px var(--accent_bg) inset!important;
 }
 
-.widget.list > .item.visited {
-    background-color: var(--item_active)!important;
+.widget.list> .item.visited {
+  background-color: var(--item_active)!important;
 }
 
 
 /*bookmarks list*/
 
 .ui.tab.segment li {
-    color: var(--primary_text)!important;
+  color: var(--primary_text)!important;
 }
 
 
-/*preview families*/
+/*preview styles*/
 
 .main.preview {
-    background-color: var(--preview_secondary_bg);
+  background-color: var(--preview_secondary_bg);
+}
+
+.ui.tab.segment.preview {
+  background-color: var(--preview_primary_bg);
+}
+
+.preview.text {
+  color: var(--preview_primary_text);
 }
 
 .main.row>.column .segment.preview {
-    border-top: 2px solid var(--preview_accent_bg);
-    background-color: var(--preview_primary_bg);
-    color: var(--preview_primary_text);
+  border-top: 2px solid var(--preview_accent_bg);
+  background-color: var(--preview_primary_bg);
+  color: var(--preview_primary_text);
 }
 
 .ui.menu.preview {
-    background-color: var(--preview_accent_bg)!important;
-    color: var(--preview_accent_text)!important;
+  background-color: var(--preview_accent_bg)!important;
+  color: var(--preview_accent_text)!important;
+  border: 0;
 }
 
 .ui.menu.preview .item {
-    color: var(--preview_accent_text)!important;
+  color: var(--preview_accent_text)!important;
 }
 
 .ui.menu.preview .item.active {
-    color: var(--preview_accent_text)!important;
+  background-color: var(--preview_accent_active)!important;
+  color: var(--preview_accent_text)!important;
+}
+
+.ui.menu.preview .item:hover {
+  background-color: var(--preview_accent_hover)!important;
+}
+
+.ui.menu.preview .item.active:hover {
+  background-color: var(--preview_accent_active)!important;
+}
+
+
+/*bottom bar preview*/
+
+.ui.menu.preview.bar {
+  background-color: var(--preview_bar_bg)!important;
+  color: var(--preview_bar_text)!important;
+}
+
+.ui.menu.preview.bar .header.item,
+.ui.menu.preview.bar .ui.item {
+  color: var(--preview_bar_text)!important;
+  background-color: var(--preview_bar_bg)!important;
+}
+
+.ui.menu.preview.bar .ui.item:hover,
+.ui.menu.preview.bar i.item:hover {
+  color: var(--preview_bar_text)!important;
+  background-color: var(--preview_bar_hover)!important;
+}
+
+.ui.menu.preview.bar .ui.item.active {
+  background-color: var(--preview_bar_active)!important;
+}
+
+.ui.basic.browser.button.preview {
+  background-color: var(--preview_item_bg)!important;
+  color: var(--preview_item_text)!important;
+  box-shadow: 0 0 0 1px var(--preview_primary_active) inset!important;
 }
