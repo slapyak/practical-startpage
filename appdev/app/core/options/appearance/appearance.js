@@ -8,14 +8,10 @@
   function AppearanceCtrl(dataService, i18n) {
     var vm = this;
     vm.columns = [];
-    vm.previewColors = []; //css variable names
-    vm.liveColors = []; //css variable names
-    vm.toggleTheme = toggleTheme;
-    vm.choosePreset = choosePreset;
+    vm.selectedTheme = {};
     vm.undoChanges = undoChanges;
     vm.setTheme = setTheme;
     vm.getData = getData;
-    vm.getDefaults = getDefaults;
     vm.locale = locale;
     vm.styles = {
       priMenu: [
@@ -36,7 +32,7 @@
 
     function activate() {
       getData(); //get the stored theme colors used, preset the input colors to that value
-      dataService.setOnChangeData('appearance', getData);
+      //dataService.setOnChangeData('selectedTheme', getData);
       // get the inputs
       var bodyStyles = window.getComputedStyle(document.body);
       var inputs = [].slice.call(document.querySelectorAll('.themeControls input'));
@@ -102,13 +98,13 @@
       document.documentElement.style.setProperty('--bar_hover', bodyStyles.getPropertyValue('--preview_bar_hover'));
       document.documentElement.style.setProperty('--bar_active', bodyStyles.getPropertyValue('--preview_bar_active'));
       document.documentElement.style.setProperty('--secondary_bg', bodyStyles.getPropertyValue('--preview_secondary_bg'));
-      //save to local file?
+      //save to local file?      
+      saveData();
     }
 
     function choosePreset(e) {
       //sets the selected preset as the currently previewed theme
-      console.log("preset selected", this.value);
-      var selectedTheme = {};
+      //console.log("preset selected", this.value);
       const lightTheme = {
         '--preview_primary_bg': '#EEEEEE',
         '--preview_primary_text': '#000000',
@@ -149,17 +145,17 @@
       };
       switch (document.getElementById('themePicker').value) {
         case "0":
-          selectedTheme = lightTheme;
+          vm.selectedTheme = lightTheme;
           break;
         case "1":
-          selectedTheme = darkTheme;
+          vm.selectedTheme = darkTheme;
           break;
         default:
           break;
       }
-      for (var key in selectedTheme) {
-        document.documentElement.style.setProperty(key, selectedTheme[key]);
-        console.log(key, selectedTheme[key])
+      for (var key in vm.selectedTheme) {
+        document.documentElement.style.setProperty(key, vm.selectedTheme[key]);
+        //console.log(key, vm.selectedTheme[key])
       }
     }
 
@@ -173,16 +169,28 @@
     }
 
     function getData() {
-      vm.appearance = [];
-      var appearance = [];
-      if (angular.isDefined(dataService.data.appearance)) {
-        appearance = angular.copy(dataService.data.appearance);
+      vm.selectedTheme = {};
+      if (angular.isDefined(dataService.data.selectedTheme)) {
+        vm.selectedTheme = angular.copy(dataService.data.selectedTheme);
+        console.log("got it");
+        console.log(vm.selectedTheme);
+      }
+      for (var key in vm.selectedTheme) {
+        document.documentElement.style.setProperty(key, vm.selectedTheme[key]);
+        //console.log(key, vm.selectedTheme[key])
       }
     }
 
+    function saveData() {
+      console.log("saving Theme");
+      console.log(vm.selectedTheme);
+      dataService.setData({
+        selectedTheme: vm.selectedTheme,
+      });
+    }
+
     function getDefaults() {
-      var appearance = dataService.getDefaultData('appearance').appearance;
-      consolidateData(appearance);
+      vm.selectedTheme = dataService.getDefaultData('selectedTheme').selectedTheme;
     }
 
     function locale(text) {
