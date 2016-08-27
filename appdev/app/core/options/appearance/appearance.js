@@ -27,7 +27,7 @@
       priButton: dataService.data.styles.primaryCol,
       secButton: dataService.data.styles.secondaryCol,
     };
-
+    console.log("activated")
     activate();
 
     function activate() {
@@ -73,9 +73,9 @@
         document.documentElement.style.setProperty(hName, hValue);
         document.documentElement.style.setProperty(aName, aValue);
       }
-      console.log(`--${this.id}`, this.value);
-      console.log(hName, hValue);
-      console.log(aName, aValue);
+      //   console.log(`--${this.id}`, this.value);
+      //   console.log(hName, hValue);
+      //   console.log(aName, aValue);
     }
 
     function setTheme() {
@@ -157,6 +157,7 @@
         document.documentElement.style.setProperty(key, vm.selectedTheme[key]);
         //console.log(key, vm.selectedTheme[key])
       }
+      console.log(vm.selectedTheme);
     }
 
     function undoChanges() {
@@ -170,10 +171,11 @@
 
     function getData() {
       vm.selectedTheme = {};
-      if (angular.isDefined(dataService.data.selectedTheme)) {
-        vm.selectedTheme = angular.copy(dataService.data.selectedTheme);
+      if (angular.isDefined(dataService.data.appearance)) {
+        vm.selectedTheme = angular.copy(dataService.data.appearance);
         console.log("got it");
-        console.log(vm.selectedTheme);
+        console.log(vm.selectedTheme == dataService.data.appearance, vm.selectedTheme, dataService.data.appearance);
+
       }
       for (var key in vm.selectedTheme) {
         document.documentElement.style.setProperty(key, vm.selectedTheme[key]);
@@ -183,29 +185,20 @@
 
     function saveData() {
       console.log("saving Theme");
-      console.log(vm.selectedTheme);
+      //console.log(vm.selectedTheme);
       dataService.setData({
-        selectedTheme: vm.selectedTheme,
+        appearance: vm.selectedTheme,
       });
     }
 
     function getDefaults() {
-      vm.selectedTheme = dataService.getDefaultData('selectedTheme').selectedTheme;
+      vm.selectedTheme = dataService.getDefaultData('appearance').selectedTheme;
     }
 
     function locale(text) {
       return i18n.get(text);
     }
 
-    function toggleTheme() {
-      var elem = document.getElementById("appWrapper");
-      if (elem.className == " ui padded main grid") {
-        elem.className = " ui padded main grid inverted segment";
-      } else {
-        elem.className = " ui padded main grid";
-      }
-      //change the theme somehow...
-    }
   }
 
   function AppearanceDirective() {
