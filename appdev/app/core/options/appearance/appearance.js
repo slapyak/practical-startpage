@@ -31,6 +31,7 @@
     activate();
 
     function activate() {
+      getTheme();
       getData(); //get the stored theme colors used, preset the input colors to that value
       //dataService.setOnChangeData('selectedTheme', getData);
       // get the inputs
@@ -100,6 +101,28 @@
       document.documentElement.style.setProperty('--secondary_bg', bodyStyles.getPropertyValue('--preview_secondary_bg'));
       //save to local file?      
       saveData();
+    }
+
+    function getTheme() {
+      console.log("previewing currently loaded theme");
+      var bodyStyles = window.getComputedStyle(document.body);
+      document.documentElement.style.setProperty('--preview_primary_bg', bodyStyles.getPropertyValue('--primary_bg'));
+      document.documentElement.style.setProperty('--preview_primary_text', bodyStyles.getPropertyValue('--primary_text'));
+      document.documentElement.style.setProperty('--preview_primary_hover', bodyStyles.getPropertyValue('--primary_hover'));
+      document.documentElement.style.setProperty('--preview_primary_active', bodyStyles.getPropertyValue('--primary_active'));
+      document.documentElement.style.setProperty('--preview_accent_bg', bodyStyles.getPropertyValue('--accent_bg'));
+      document.documentElement.style.setProperty('--preview_accent_text', bodyStyles.getPropertyValue('--accent_text'));
+      document.documentElement.style.setProperty('--preview_accent_hover', bodyStyles.getPropertyValue('--accent_hover'));
+      document.documentElement.style.setProperty('--preview_accent_active', bodyStyles.getPropertyValue('--accent_active'));
+      document.documentElement.style.setProperty('--preview_item_bg', bodyStyles.getPropertyValue('--item_bg'));
+      document.documentElement.style.setProperty('--preview_item_text', bodyStyles.getPropertyValue('--item_text'));
+      document.documentElement.style.setProperty('--preview_item_hover', bodyStyles.getPropertyValue('--item_hover'));
+      document.documentElement.style.setProperty('--preview_item_active', bodyStyles.getPropertyValue('--item_active'));
+      document.documentElement.style.setProperty('--preview_bar_bg', bodyStyles.getPropertyValue('--bar_bg'));
+      document.documentElement.style.setProperty('--preview_bar_text', bodyStyles.getPropertyValue('--bar_text'));
+      document.documentElement.style.setProperty('--preview_bar_hover', bodyStyles.getPropertyValue('--bar_hover'));
+      document.documentElement.style.setProperty('--preview_bar_active', bodyStyles.getPropertyValue('--bar_active'));
+      document.documentElement.style.setProperty('--preview_secondary_bg', bodyStyles.getPropertyValue('--secondary_bg'));
     }
 
     function choosePreset(e) {
@@ -185,10 +208,30 @@
 
     function saveData() {
       console.log("saving Theme");
+      var bodyStyles = window.getComputedStyle(document.body);
       //console.log(vm.selectedTheme);
       dataService.setData({
-        appearance: vm.selectedTheme,
+        appearance: {
+          '--primary_bg': bodyStyles.getPropertyValue('--primary_bg').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--primary_text': bodyStyles.getPropertyValue('--primary_text').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--primary_hover': bodyStyles.getPropertyValue('--primary_hover').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--primary_active': bodyStyles.getPropertyValue('--primary_active').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--accent_bg': bodyStyles.getPropertyValue('--accent_bg').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--accent_text': bodyStyles.getPropertyValue('--accent_text').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--accent_hover': bodyStyles.getPropertyValue('--accent_hover').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--accent_active': bodyStyles.getPropertyValue('--accent_active').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--item_bg': bodyStyles.getPropertyValue('--item_bg').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--item_text': bodyStyles.getPropertyValue('--item_text').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--item_hover': bodyStyles.getPropertyValue('--item_hover').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--item_active': bodyStyles.getPropertyValue('--item_active').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--bar_bg': bodyStyles.getPropertyValue('--bar_bg').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--bar_text': bodyStyles.getPropertyValue('--bar_text').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--bar_hover': bodyStyles.getPropertyValue('--bar_hover').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--bar_active': bodyStyles.getPropertyValue('--bar_active').replace(/\s+/g, '').replace(/\\3/, ''),
+          '--secondary_bg': bodyStyles.getPropertyValue('--secondary_bg'.replace(/\s+/g, '').replace(/\\3/, ''))
+        }
       });
+      console.log(vm.selectedTheme == dataService.data.appearance, vm.selectedTheme, dataService.data.appearance);
     }
 
     function getDefaults() {
