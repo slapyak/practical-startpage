@@ -12,26 +12,14 @@
     vm.undoChanges = undoChanges;
     vm.setTheme = setTheme;
     vm.getData = getData;
+    vm.saveData = saveData;
     vm.locale = locale;
-    vm.styles = {
-      priMenu: [
-        dataService.data.styles.primaryCol, {
-          inverted: dataService.data.styles.primaryInv,
-        },
-      ],
-      secMenu: [
-        dataService.data.styles.secondaryCol, {
-          inverted: dataService.data.styles.secondaryInv,
-        },
-      ],
-      priButton: dataService.data.styles.primaryCol,
-      secButton: dataService.data.styles.secondaryCol,
-    };
-    console.log("activated")
     activate();
+    console.log("activated");
 
     function activate() {
-      getTheme();
+      //   console.log("activated")
+      //   getTheme();
       getData(); //get the stored theme colors used, preset the input colors to that value
       //dataService.setOnChangeData('selectedTheme', getData);
       // get the inputs
@@ -80,7 +68,7 @@
     }
 
     function setTheme() {
-      console.log("applying previewed theme");
+      //   console.log("applying previewed theme");
       var bodyStyles = window.getComputedStyle(document.body);
       document.documentElement.style.setProperty('--primary_bg', bodyStyles.getPropertyValue('--preview_primary_bg'));
       document.documentElement.style.setProperty('--primary_text', bodyStyles.getPropertyValue('--preview_primary_text'));
@@ -104,7 +92,7 @@
     }
 
     function getTheme() {
-      console.log("previewing currently loaded theme");
+      //   console.log("previewing currently loaded theme");
       var bodyStyles = window.getComputedStyle(document.body);
       document.documentElement.style.setProperty('--preview_primary_bg', bodyStyles.getPropertyValue('--primary_bg'));
       document.documentElement.style.setProperty('--preview_primary_text', bodyStyles.getPropertyValue('--primary_text'));
@@ -180,7 +168,7 @@
         document.documentElement.style.setProperty(key, vm.selectedTheme[key]);
         //console.log(key, vm.selectedTheme[key])
       }
-      console.log(vm.selectedTheme);
+      //   console.log(vm.selectedTheme);
     }
 
     function undoChanges() {
@@ -196,18 +184,18 @@
       vm.selectedTheme = {};
       if (angular.isDefined(dataService.data.appearance)) {
         vm.selectedTheme = angular.copy(dataService.data.appearance);
-        console.log("got it");
-        console.log(vm.selectedTheme == dataService.data.appearance, vm.selectedTheme, dataService.data.appearance);
+        // console.log("got it");
+        // console.log(vm.selectedTheme == dataService.data.appearance, vm.selectedTheme, dataService.data.appearance);
 
       }
       for (var key in vm.selectedTheme) {
         document.documentElement.style.setProperty(key, vm.selectedTheme[key]);
-        //console.log(key, vm.selectedTheme[key])
+        // console.log(key, vm.selectedTheme[key])
       }
     }
 
     function saveData() {
-      console.log("saving Theme");
+      //   console.log("saving Theme");
       var bodyStyles = window.getComputedStyle(document.body);
       //console.log(vm.selectedTheme);
       dataService.setData({
@@ -231,7 +219,7 @@
           '--secondary_bg': bodyStyles.getPropertyValue('--secondary_bg'.replace(/\s+/g, '').replace(/\\3/, ''))
         }
       });
-      console.log(vm.selectedTheme == dataService.data.appearance, vm.selectedTheme, dataService.data.appearance);
+      //   console.log(vm.selectedTheme == dataService.data.appearance, vm.selectedTheme, dataService.data.appearance);
     }
 
     function getDefaults() {

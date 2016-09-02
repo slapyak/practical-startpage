@@ -124,12 +124,14 @@
     color: var(--bar_text)!important;
   }
   
+  .left.menu.badges .item,
   .ui.menu.black.inverted .header.item,
   .ui.menu.black.inverted .ui.item {
     color: var(--bar_text)!important;
     background-color: var(--bar_bg)!important;
   }
   
+  .left.menu.badges .item:hover,
   .ui.menu.black.inverted .ui.item:hover,
   .ui.menu.black.inverted i.item:hover {
     color: var(--bar_text)!important;
@@ -147,10 +149,50 @@
     background-color: var(--accent_hover)!important;
   }
   
+  .ui.menu .ui.visible.popup,
+  .ui.menu .ui.visible.popup a,
+  .ui.divided.selection.list .list>.item,
+  .ui.divided.selection.list>.item {
+    background-color: var(--primary_bg)!important;
+    color: var(--primary_text)!important;
+    display: block;
+  }
+  
+  .ui.menu .ui.visible.popup a:hover,
+  .ui.divided.selection.list .list>.item:hover,
+  .ui.divided.selection.list>.item:hover {
+    background-color: var(--primary_hover)!important;
+    color: var(--primary_text)!important;
+    display: block;
+  }
+  
+  .ui.list .list>.item>.content,
+  .ui.list>.item>.content,
+  .ui.list .list>.item .header,
+  .ui.list>.item .header,
+  .ui.list .list>.item .description,
+  .ui.list>.item .description,
+  psb-gmail> .popup .meta> .title {
+    color: var(--primary_text)!important;
+  }
+  
   .ui.basic.browser.button {
     background-color: var(--item_bg)!important;
     color: var(--item_text)!important;
     box-shadow: 0 0 0 1px var(--primary_active) inset!important;
+  }
+  
+  .ui.basic.blue.button:focus,
+  .ui.basic.blue.buttons .button:focus {
+    background: var(--accent_text)!important;
+    box-shadow: 0 0 0 2px var(--accent_bg) inset!important;
+    color: var(--accent_active)!important;
+  }
+  
+  .ui.basic.blue.button:active,
+  .ui.basic.blue.buttons .button:active {
+    box-shadow: 0 0 0 2px var(--accent_bg) inset!important;
+    color: var(--item_text)!important;
   }
   
   .ui.basic.browser.button:visited {
