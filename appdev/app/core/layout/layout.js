@@ -137,6 +137,7 @@
     function getLayout() {
       vm.layout = dataService.data.layout;
       vm.widgets = dataService.data.widgets;
+      vm.theme = dataService.data.appearance;
       var c, t;
       if (angular.isDefined(dataService.data.activeTabs)) {
         vm.activeTabs = dataService.data.activeTabs;
@@ -166,6 +167,16 @@
           }
         }
       }
+
+       if (angular.isDefined(dataService.data.appearance)) {
+        vm.theme = angular.copy(dataService.data.appearance);
+        console.log("got it");
+      }
+      for (var key in vm.theme) {
+        document.documentElement.style.setProperty(key, vm.theme[key]);
+        // console.log(key, vm.theme[key])
+      }
+      
     }
 
     function setHelpPopup() {
